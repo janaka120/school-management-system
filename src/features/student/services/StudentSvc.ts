@@ -1,6 +1,7 @@
 import { StudentResponse } from '../models/Student';
 import { Student, GetStudentListResponse, MSG } from '../models/Student';
 
+
 export const getStudentList = async () => {
 	const returnVal: GetStudentListResponse = {
 		success: false,
@@ -66,11 +67,11 @@ export const addStudent = async (newStudent: Student, studentList: Student[]): P
 		if (!newStudent || !studentList) {
 			throw {message: MSG.INVALID_PARAMS};
 		}
-		studentList.push(newStudent);
-		await window.localStorage.setItem('students', JSON.stringify(studentList));
+		const newStudents = [...studentList, newStudent];
+		await window.localStorage.setItem('students', JSON.stringify(newStudents));
 
 		returnVal.success = true;
-		returnVal.data = studentList;
+		returnVal.data = newStudents;
 	} catch (e) {
 		console.log('--saveStudent-- error', e);
 		returnVal.msg = MSG.CREATE_FAILED;
@@ -86,7 +87,7 @@ export const saveStudents = async (saveList: Student[]): Promise<StudentResponse
 		if (!saveList) {
 			throw {message: MSG.INVALID_PARAMS};
 		}
-		await window.localStorage.setItem('students', JSON.stringify(saveStudents));
+		await window.localStorage.setItem('students', JSON.stringify(saveList));
 
 		returnVal.success = true;
 		returnVal.data = saveList;

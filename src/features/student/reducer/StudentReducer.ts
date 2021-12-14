@@ -27,6 +27,10 @@ export const StudentReducer = createSlice({
 			state.studentList = action.payload;
 			state.isInProgress = false;
 		},
+		saveAllStudentSuccess: (state, action: PayloadAction<StudentPageResponse>) => {
+			state.studentList = action.payload;
+			state.isInProgress = false;
+		},
 		fetchStudentListSuccess: (state, action: PayloadAction<StudentPageResponse>) => {
 			state.studentList = action.payload;
 			state.isInProgress = false;
@@ -50,6 +54,7 @@ export const {
 	addNewStudentSuccess,
 	onFormCancel,
 	onDeleteSuccess,
+	saveAllStudentSuccess
 } = StudentReducer.actions;
 
 export default StudentReducer.reducer;

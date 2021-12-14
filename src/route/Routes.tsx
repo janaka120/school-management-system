@@ -1,8 +1,15 @@
-import React, {Fragment, lazy, Suspense} from 'react';
+import React, {Fragment, lazy, Suspense, useEffect} from 'react';
+import { useDispatch } from 'react-redux';
 import {Route, Switch, Redirect} from 'react-router-dom';
 
-import Dashboard from '../layouts/Dashboard';
+import MainLayout from '../layouts/MainLayout';
 import {RoutePath} from '../utils/Constant';
+
+import jsonData from '../json/StudentDataSet.json';
+import { IStudentJsonFile } from '../features/student/models/Student';
+import { saveAllStudents } from '../features/student/actions/StudentActions';
+
+const studentDataSet: IStudentJsonFile = jsonData;
 
 type RoutesType = {
 	exact?: boolean;
@@ -14,6 +21,11 @@ type RoutesType = {
 }[];
 
 export const RenderRoutes = (routes: RoutesType = []): JSX.Element => {
+	const dispatch = useDispatch();
+	useEffect(() => {
+		// console.log("studentDataSet >>", studentDataSet);
+		dispatch(saveAllStudents(studentDataSet));
+	}, []);
 
 	return (
 		<Suspense
@@ -47,22 +59,22 @@ const routes: RoutesType = [
 	{
 		exact: true,
 		path: `${RoutePath.STUDENT_LIST_PATH}`,
-		layout: Dashboard,
-		component: lazy(() => import('../features/student/containers/StudentContainer')),
+		layout: MainLayout,
+		component: lazy(() => import('../features/student/containers/StudentListContainer')),
 		id: `${RoutePath.STUDENT_LIST_PATH}`,
 	},
 	{
 		exact: true,
 		path: `${RoutePath.STUDENT_CREATE_PATH}`,
-		layout: Dashboard,
-		component: lazy(() => import('../features/student/containers/StudentContainer')),
+		layout: MainLayout,
+		component: lazy(() => import('../features/student/containers/StudentFormContainer')),
 		id: `${RoutePath.STUDENT_CREATE_PATH}`,
 	},
 	{
 		exact: true,
 		path: `${RoutePath.STUDENT_UPDATE_PATH}`,
-		layout: Dashboard,
-		component: lazy(() => import('../features/student/containers/StudentContainer')),
+		layout: MainLayout,
+		component: lazy(() => import('../features/student/containers/StudentFormContainer')),
 		id: `${RoutePath.STUDENT_UPDATE_PATH}`,
 	},
 ];

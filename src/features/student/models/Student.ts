@@ -1,4 +1,3 @@
-import { PageResponse } from './../../../app/appModel';
 import {ApiPageResponse, ApiResponse, FieldNames, getFieldNameMap} from '../../../app/appModel';
 
 export type StudentAction = 'CREATE' | 'UPDATE' | 'DELETE';
@@ -7,7 +6,7 @@ export type FormMode = 'ADD' | 'EDIT' | 'VIEW';
 
 export interface Price {
 	ccy: string,
-	amount: number,
+	amount: string,
 }
 
 export interface Student {
@@ -41,7 +40,7 @@ export const emptyStudent: Student = {
 	hours: '',
 	price: {
 		ccy: '',
-		amount: 0,
+		amount: '',
 	}
 };
 
@@ -67,3 +66,4 @@ export const MSG = {
 	UPDATE_FAILED: 'Unable to update the record.',
 	DELETE_FAILED: 'Unable to delete the record.',
 };
+export type IStudentJsonFile = Student[];

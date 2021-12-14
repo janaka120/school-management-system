@@ -1,10 +1,125 @@
 @import '../abstracts/global';
 
-.student_container {
+.student_list_container {
 	height: 100%;
 
-	// forms
-	.add_client_container {
+	.main-btn {
+		padding: 9px, 17px
+	}
 
+	.top_con {
+		padding-bottom: 29px;
+	}
+}
+
+.student_form_container {
+	height: 70%;
+	display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+	.form {
+		/* Section */
+
+		/* Auto Layout */
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		padding: 0px;
+
+		height: 235px;
+
+		/* white */
+		background: #FFFFFF;
+
+		/* shadow */
+		box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.06);
+		border-radius: 8px;
+
+		// padding: 24px;
+
+		justify-content: space-between;
+
+		&__header {
+			/* Heading */
+			height: 24px;
+			// width: 100%;;
+			font-family: Inter;
+			font-style: normal;
+			font-weight: 500;
+			font-size: 18px;
+			line-height: 24px;
+			// padding: 24px;
+			margin: 24px 24px 0px 24px;
+			/* gray/900 */
+			color: #111827;
+
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			align-items: center;
+			// margin: 0px 4px;
+
+			/* Inside Auto Layout */
+			flex: none;
+			order: 1;
+			align-self: stretch;
+			flex-grow: 0;
+			// margin: 0px 0px;
+			
+			.close_btn {
+				cursor: pointer;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				border: none;
+				background: none;
+
+				&:focus {
+					outline: none !important;
+				}
+			}
+		}
+
+		&__body {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+
+			/* Inside Auto Layout */
+			flex: none;
+			order: 1;
+			align-self: stretch;
+			flex-grow: 0;
+			margin: 0px 24px;
+		}
+
+		&__footer {
+			/* Footer */
+
+			/* Auto Layout */
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: flex-end;
+			padding: 0px 24px;
+
+			// position: static;
+			// width: 100%;
+			height: 62px;
+			// left: 0px;
+			// top: 173px;
+
+			background: #16295A;
+
+			/* Inside Auto Layout */
+			flex: none;
+			order: 1;
+			align-self: stretch;
+			flex-grow: 0;
+			margin: 0px 0px;
+			border-bottom-right-radius: 8px;
+			border-bottom-left-radius: 8px;
+		}
 	}
 }
