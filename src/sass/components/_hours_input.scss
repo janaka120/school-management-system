@@ -1,0 +1,61 @@
+@import '../abstracts/global';
+
+.hours_input {
+	/* Auto Layout */
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: center;
+
+	&__label {
+		/* Label */
+
+		/* text-sm/leading-5/font-medium */
+		font-family: Inter;
+		font-style: normal;
+		font-weight: 500;
+		font-size: 14px;
+		line-height: 20px;
+
+		text-align: left;
+
+		color: #374151;
+
+		margin: 4px 0px;
+	}
+	
+	&__element {
+		height: 38px;
+
+		background: #FFFFFF;
+		/* gray/300 */
+		border: 1px solid #D1D5DB;
+		box-sizing: border-box;
+	
+		/* shadow-sm */
+		box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+		border-radius: 6px;
+	
+		/* Inside Auto Layout */
+		flex: none;
+		order: 1;
+		flex-grow: 0;
+		// margin: 4px 0px;
+		padding: 9px 13px;
+		width: 79px;
+
+		
+		&::-webkit-inner-spin-button {
+			-webkit-appearance: none;
+			display: none;
+		}
+
+		&:focus {
+			outline: none !important;
+		}
+	}
+
+	&:focus {
+		outline: none !important;
+	}
+}

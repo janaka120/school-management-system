@@ -1,0 +1,124 @@
+@import '../abstracts/global';
+
+.student_table {
+	/* Student Table */
+
+	padding: 0px;
+
+	/* white */
+	background: $white_255_255;
+
+	/* gray/200 */
+	border: 1px solid $white_231_235;
+	box-sizing: border-box;
+
+	/* shadow */
+	box-shadow: 0px 1px 3px $black_0_0_01, 0px 1px 2px $black_0_0_06;
+	border-radius: 8px;
+	border-spacing: 0;
+
+	th {
+		/* Tables/Cell */
+		
+		border-bottom: 1px solid $white_231_235;
+		padding-top: 12px;
+		padding-bottom: 12px;
+		padding-left: 24px;
+
+		/* gray/50 */
+		background: $white_250_251;
+		
+		/* Inside Auto Layout */
+		flex: none;
+		order: 0;
+		align-self: stretch;
+		flex-grow: 0;
+		margin: 0px 0px;
+		
+		
+		/* Text */
+		
+		/* text-xs/leading-4/font-medium/uppercase/tracking-wider */
+		font-family: Inter;
+		font-style: normal;
+		font-weight: 500;
+		font-size: 12px;
+		line-height: 16px;
+		
+		/* identical to box height, or 133% */
+		letter-spacing: 0.05em;
+		text-transform: uppercase;
+		
+		/* Gray 3 */
+		color: $black_130_130;
+		text-align: left;
+	}
+	
+	tr:first-child > th:nth-child(1) {
+		width: 172px;
+		border-top-left-radius : 8px;
+	}
+	tr:first-child > th:nth-child(2) {
+		width: 179px;
+	}
+	tr:first-child > th:nth-child(3) {
+		width: 135px;
+	}
+	tr:first-child > th:nth-child(4) {
+		width: 199px;
+	}
+	tr:first-child > th:nth-child(5) {
+		width: 104px;
+	}
+	tr:first-child > th:nth-child(6) {
+		width: 125px;
+	}
+	tr:first-child > th:nth-child(7) {
+		width: 60px;
+	}
+	tr:first-child > th:nth-child(8) {
+		width: 81px;
+		border-top-right-radius : 8px;
+	}
+
+	td {
+		padding-top: 12px;
+		padding-bottom: 12px;
+		padding-left: 24px;
+
+		/* Text */
+
+		/* text-sm/leading-5/font-medium */
+		font-family: Inter;
+		font-style: normal;
+		font-weight: 500;
+		font-size: 14px;
+		line-height: 20px;
+
+		/* identical to box height, or 143% */
+
+		color: $black_130_130;
+
+
+		/* Inside Auto Layout */
+		flex: none;
+		order: 0;
+		flex-grow: 0;
+		margin: 0px 0px;
+	}
+
+	tr:nth-child(odd) {
+		background: $white_250_251;
+	}
+
+	tr:last-child {
+		td:nth-child(1) {
+			border-bottom-left-radius : 8px;
+		}
+
+		td:nth-child(8) {
+			border-bottom-right-radius : 8px;
+		}
+	}
+
+}

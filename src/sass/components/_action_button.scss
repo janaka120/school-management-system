@@ -1,0 +1,41 @@
+@import '../abstracts/global';
+
+.action_btn {
+
+	border: none;
+	background: none;
+	/* Text */
+
+	position: static;
+	width: 26px;
+	height: 20px;
+	left: 0px;
+	top: 0px;
+
+	/* text-sm/leading-5/font-normal */
+	font-family: Inter;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	line-height: 20px;
+
+	/* identical to box height, or 143% */
+
+	color: $green_193_177;
+
+
+	/* Inside Auto Layout */
+	flex: none;
+	order: 0;
+	flex-grow: 0;
+	margin: 0px 0px;
+
+	&:focus {
+		outline: none !important;
+	}
+
+	&:hover {
+		color: $green_173_159;
+		cursor: pointer;
+	}
+}

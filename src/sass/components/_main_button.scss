@@ -1,0 +1,46 @@
+@import '../abstracts/global';
+
+.main_btn {
+	/* Button */
+
+	border-style: none !important;
+
+	/* Auto Layout */
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	padding: 9px 17px;
+	cursor: pointer;
+	background: $green_193_177;
+	;
+
+	/* shadow-sm */
+	box-shadow: 0px 1px 2px $black_0_0_05;
+	border-radius: 6px;
+
+
+	/* Text */
+
+	font-family: Inter;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 20px;
+	color: $white_255_255;
+
+
+	/* Inside Auto Layout */
+	flex: none;
+	order: 0;
+	flex-grow: 0;
+	margin: 0px 0px;
+
+	&:focus {
+		outline: none !important;
+	}
+
+	&:hover {
+		background: $green_173_159;
+	}
+}

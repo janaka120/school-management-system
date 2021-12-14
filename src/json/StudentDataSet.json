@@ -1,0 +1,50 @@
+[
+	{
+		"id": "stud_001",
+		"firstName": "Mary",
+		"lastName": "Miller",
+		"dob": "04.06.1992",
+		"courseName": "Java Multithreading",
+		"hours": "100H",
+		"price": {
+			"ccy": "EUR",
+			"amount": "16500.00"
+		}
+	},
+	{
+		"id": "stud_002",
+		"firstName": "Kimberly",
+		"lastName": "Williams",
+		"dob": "16.10.1987",
+		"courseName": "Modern Paython 3",
+		"hours": "50H",
+		"price": {
+			"ccy": "EUR",
+			"amount": "3200.00"
+		}
+	},
+	{
+		"id": "stud_003",
+		"firstName": "Thomas",
+		"lastName": "Sellers",
+		"dob": "29.05.1991",
+		"courseName": "JavaScript Algorithms",
+		"hours": "20H",
+		"price": {
+			"ccy": "EUR",
+			"amount": "800.00"
+		}
+	},
+	{
+		"id": "stud_004",
+		"firstName": "Lindsay",
+		"lastName": "Patterson",
+		"dob": "23.12.1982",
+		"courseName": "Complete Vue.js 3",
+		"hours": "150H",
+		"price": {
+			"ccy": "EUR",
+			"amount": "12000.00"
+		}
+	}
+]
