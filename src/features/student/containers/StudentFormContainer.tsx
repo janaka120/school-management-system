@@ -48,12 +48,12 @@ const StudentFormContainer: FC = () => {
 					</button>
 				</div>
 				<div className='form__body'>
-					<MainInput label='First Name' onChange={onChangeTextHandler} value={studentInfo.firstName} id='firstName' />
-					<MainInput label='Last Name' onChange={onChangeTextHandler} value={studentInfo.lastName} id='lastName' />
-					<MainInput label='Date of Birth' onChange={onChangeTextHandler} value={studentInfo.dob} id='dob' type='date' />
-					<MainInput label='Course Name' onChange={onChangeTextHandler} value={studentInfo.courseName} id='courseName' inputClassName='main_input__element--long' />
-					<HoursInput label='Hours' onChange={onChangeTextHandler} value={studentInfo.hours} id='hours' />
-					<AmountInput label='Price' onChange={onChangePriceHandler} value={studentInfo.price.amount} id='price' ccy='EUR' />
+					<MainInput label='First Name' onChange={onChangeTextHandler} value={studentInfo.firstName} id='firstName' className='first_name' />
+					<MainInput label='Last Name' onChange={onChangeTextHandler} value={studentInfo.lastName} id='lastName' className='last_name' />
+					<MainInput label='Date of Birth' onChange={onChangeTextHandler} value={studentInfo.dob} id='dob' type='date' className='date' />
+					<MainInput label='Course Name' onChange={onChangeTextHandler} value={studentInfo.courseName} id='courseName' inputClassName='main_input__element--long' className='course_name' />
+					<HoursInput label='Hours' onChange={onChangeTextHandler} value={studentInfo.hours} id='hours' className='hours' />
+					<AmountInput label='Price' onChange={onChangePriceHandler} value={studentInfo.price.amount} id='price' ccy='EUR' className="price" />
 				</div>
 				<div className='form__footer'>
 					<MainButton text="Save" onClick={onClickHandler} />

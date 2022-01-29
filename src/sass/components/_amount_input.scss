@@ -25,7 +25,6 @@
 	
 	&__element {
 		height: 38px;
-		width: 145px;
 
 		background: #FFFFFF;
 		/* gray/300 */
@@ -42,6 +41,7 @@
 		order: 1;
 		flex-grow: 0;
 		padding: 9px 13px;
+		width: 100%;
 
 		&::-webkit-inner-spin-button {
 			-webkit-appearance: none;

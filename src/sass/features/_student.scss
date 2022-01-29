@@ -84,7 +84,6 @@
 		&__body {
 			display: flex;
 			flex-direction: row;
-			justify-content: space-between;
 
 			/* Inside Auto Layout */
 			flex: none;
@@ -92,6 +91,30 @@
 			align-self: stretch;
 			flex-grow: 0;
 			margin: 0px 24px;
+
+			.first_name, .last_name {
+				width: 18%;
+				margin-right: 17px;
+			}
+
+			.date {
+				width: 14%;
+				margin-right: 17px;
+			}
+
+			.course_name {
+				width: 32%;
+				margin-right: 17px;
+			}
+
+			.hours {
+				width: 10%;
+				margin-right: 17px;
+			}
+
+			.price {
+				width: 18%;
+			}
 		}
 
 		&__footer {
